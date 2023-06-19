@@ -1,0 +1,24 @@
+{
+    "algorithms": [
+        {
+            "algorithm_type": "ConstDeepNet",
+            "hyperparameter_combinations": [
+                { "max_layer_size": 20, "learning_rate": 0.0005 },
+                { "max_layer_size": 20, "learning_rate": 0.001 },
+                { "max_layer_size": 20, "learning_rate": 0.003 },
+                { "max_layer_size": 20, "learning_rate": 0.01 }
+            ],
+            "pruning_modes": [
+                { "is_pruning_active": false },
+                { "is_pruning_active": true, "magnitude_threshold": 0.1 }
+            ]
+        }
+    ],
+    "datasets": [
+        { "dataset_type": "Spirals2", "target_accuracy": 0.9 },
+        { "dataset_type": "Spirals3", "target_accuracy": 0.8 },
+        { "dataset_type": "Curves", "target_accuracy": 0.99 },
+        { "dataset_type": "Compound", "target_accuracy": 0.85 }
+    ],
+    "random_numbers": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
